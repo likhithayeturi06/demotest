@@ -1,4 +1,4 @@
-name : deployment 1
+name : deployment-activity
 on : 
   pull_request:
     types:
