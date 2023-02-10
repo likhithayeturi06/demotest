@@ -10,7 +10,7 @@ on :
     #- 'dev-*'					# dev-new, dev-activity
     #- 'dev/**'				# dec/feat   dev/new/feat
   paths-ignore:
-   - '.github/workflows/*'
+   - '.github/workflows/activity.yml'
 jobs:
   deploy:
     runs-on: windows-2022
