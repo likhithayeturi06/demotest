@@ -1,5 +1,5 @@
 name : deployment 2
-run : push
+on : push
 jobs:
   lint:
     runs-on: windows-2022

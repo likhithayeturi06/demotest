@@ -1,5 +1,5 @@
 name : deployment 1
-run : push
+on : push
 jobs:
   deploy:
     runs-on: windows-2022
