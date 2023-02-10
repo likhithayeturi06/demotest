@@ -1,4 +1,4 @@
-name: Deploy website
+name: Job Output
 on:
   push:
     branches:
@@ -15,6 +15,11 @@ jobs:
         run: npm run lint
       - name: Test code
         run: npm run test
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: src
   build:
     needs: test
     runs-on: ubuntu-latest
@@ -34,5 +39,13 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name : Get build artifacts
+        uses : actions/download-artifact@v3
+        with:
+          name: my-artifact
+      - name : Output Content
+        run  : ls
+      - name : Output filename
+        run : echo "${{needs.build.outputs.script-file}}"
       - name: Deploy
         run: echo "Deploying..."
