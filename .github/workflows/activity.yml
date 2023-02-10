@@ -10,7 +10,7 @@ on :
     - activitytypes
     #- 'dev-*'					# dev-new, dev-activity
     #- 'dev/**'				# dec/feat   dev/new/feat
-   paths:
+   paths-ignore:
     - '.github/workflows/*'
 jobs:
   deploy:
