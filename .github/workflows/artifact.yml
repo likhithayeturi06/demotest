@@ -1,4 +1,4 @@
-name : deployment 2
+name : Upload Artifact
 on : push
 jobs:
   lint:
@@ -20,7 +20,7 @@ jobs:
       - name : Run test
         run  : npm run test
       - name : Upload Atrifacts
-        uses : ations/upload-artifact@v3
+        uses : actions/upload-artifact@v3
         with:
           name: dist-file
           path: dist
