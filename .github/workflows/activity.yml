@@ -2,7 +2,7 @@ name : deployment 1
 on : 
   pull_request:
     types:
-     - opened
+     - closed
     workflow_dispatch:
 jobs:
   deploy:
