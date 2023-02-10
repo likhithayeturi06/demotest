@@ -2,7 +2,7 @@ name : deployment 1
 run : push
 jobs:
   deploy:
-    runs-on:windows-2022
+    runs-on: windows-2022
     steps:
       - name : get code
         uses : actions/checkout@v3

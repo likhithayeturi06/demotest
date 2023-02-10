@@ -2,7 +2,7 @@ name : deployment 2
 run : push
 jobs:
   lint:
-    runs-on:windows-2022
+    runs-on: windows-2022
     steps:
       - name : get code
         uses : actions/checkout@v3
@@ -11,7 +11,7 @@ jobs:
       - name : Lint
         run  : npm run lint
   test:
-    runs-on:windows-2022
+    runs-on: windows-2022
     steps:
       - name : get code
         uses : actions/checkout@v3
@@ -20,7 +20,7 @@ jobs:
       - name : Run test
         run  : npm run test
   deploy:
-    runs-on:windows-2022
+    runs-on: windows-2022
     steps:
       - name : get code
         uses : actions/checkout@v3
