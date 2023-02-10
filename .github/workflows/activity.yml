@@ -2,8 +2,15 @@ name : deployment 1
 on : 
   pull_request:
     types:
-     - closed
-    workflow_dispatch:
+     - opened
+  workflow_dispatch:
+  push:
+   branches:
+    - main
+    - 'dev-*'					# dev-new, dev-activity
+    - 'dev/**'				# dec/feat   dev/new/feat
+  paths-ignore:
+   - '.github/workflows/*'
 jobs:
   deploy:
     runs-on: windows-2022
