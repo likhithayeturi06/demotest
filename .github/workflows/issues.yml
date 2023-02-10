@@ -1,0 +1,8 @@
+name : handle issues
+on : issues
+jobs:
+  output-info:
+    runs-on: windows-2022
+    steps:
+      - name : output event details
+        run : echo "${{ toJSON(github.event) }}" 
