@@ -6,7 +6,7 @@ on :
   workflow_dispatch:
   push:
    branches:
-    - activitytypes
+    - main
     #- 'dev-*'					# dev-new, dev-activity
     #- 'dev/**'				# dec/feat   dev/new/feat
   paths-ignore:
