@@ -1,4 +1,4 @@
-name : Upload Artifact
+name : Download Artifact
 on : push
 jobs:
   lint:
@@ -27,8 +27,15 @@ jobs:
             public
             package.json
   deploy:
+    needs : test
     runs-on: windows-2022
     steps:
+      - name : Get build artifacts
+        uses : actions/download-artifact@v3
+        with:
+          name: my-artifact
+      - name : Output Content
+        run  : ls
       - name : get code
         uses : actions/checkout@v3
       - name : Install dependencies
