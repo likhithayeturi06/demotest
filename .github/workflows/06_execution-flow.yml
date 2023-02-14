@@ -80,7 +80,7 @@ jobs:
     runs-on : windows-2022
     steps:
       - name : Output Information
-       run  : |
-        echo " Something went wrong"
-        echo "${{ github }}"
+        run  : |
+          echo " Something went wrong"
+          echo "${{ github }}"
 
