@@ -1,4 +1,4 @@
-name: Deployment
+name: Environment Variables
 on:
   push:
     branches:
@@ -13,7 +13,7 @@ jobs:
       MONGODB_USERNAME : likhithayeturi
       MONGODB_PASSWORD : Likhitha@06
       PORT : 8080
-    runs-on: ubuntu-latest
+    runs-on: windows-2022
     steps:
       - name: Get Code
         uses: actions/checkout@v3
@@ -33,7 +33,7 @@ jobs:
           echo "MONGODB_USERNAME : $ {{env.MONGODB_USERNAME}}"
   deploy:
     needs: test
-    runs-on: ubuntu-latest
+    runs-on: windows-2022
     steps:
       - name: Output information
         run: |        
