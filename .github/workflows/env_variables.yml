@@ -1,4 +1,4 @@
-name: Environment Variables
+name: Secrets
 on:
   push:
     branches:
