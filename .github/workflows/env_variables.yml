@@ -10,8 +10,8 @@ jobs:
   test:
     env:
       MONGODB_CLUSTER_ADDRESS: cluster0.zyazolr.mongodb.net
-      MONGODB_USERNAME : likhithayeturi
-      MONGODB_PASSWORD : Likhitha@06
+      MONGODB_USERNAME : ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD : ${{ secrets.MONGODB_PASSWORD }}
       PORT : 8080
     runs-on: windows-2022
     steps:
@@ -30,7 +30,7 @@ jobs:
         run: npm test
       - name: Output information
         run: |
-          echo "MONGODB_USERNAME : $ {{env.MONGODB_USERNAME}}"
+          echo "MONGODB_USERNAME : $ {{ env.MONGODB_USERNAME}}"
   deploy:
     needs: test
     runs-on: windows-2022
