@@ -1,0 +1,8 @@
+name : Reusable deploy
+on : workflow_call
+jobs:
+  deploy:
+    runs-on: windows-2022
+    steps:
+      - name: Output Information
+        run : echoo "Deploying & Uploading.."
