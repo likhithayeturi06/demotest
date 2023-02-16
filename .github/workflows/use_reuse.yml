@@ -68,8 +68,8 @@ jobs:
     uses: ./.github/workflows/reusable_workflow.yml
     with:
       artifact-name: dist-files
-    secrets:
-      some-secrets: ${{ secrets.some-secrets }}
+    #secrets:
+      #some-secrets: ${{ secrets.some-secrets }}
   print-deploy-result:
     needs: deploy
     runs-on : windows-2022

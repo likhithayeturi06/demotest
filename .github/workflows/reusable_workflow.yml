@@ -11,9 +11,9 @@ on :
       result:
          description: The result of deployment
          value: ${{ jobs.deploy }}
-    secrets:
-      some-secret:
-        required: true
+    #secrets:
+      #some-secret:
+        #required: true
 jobs:
   deploy:
     outputs:
