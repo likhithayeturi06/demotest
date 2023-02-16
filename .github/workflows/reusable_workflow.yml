@@ -7,8 +7,17 @@ on :
         required: false
         default: dist
         type: string
+    outputs:
+      result:
+         description: The result of deployment
+         value: ${{ jobs.deploy }}
+    secrets:
+      some-secret:
+        required: true
 jobs:
   deploy:
+    outputs:
+      outcome: ${{ steps.set-result.outputs.step-result }}
     runs-on: windows-2022
     steps:
       - name: Get-Code
@@ -19,3 +28,6 @@ jobs:
         run : ls
       - name: Output Information
         run : echo "Deploying & Uploading.."
+      - name: Set result Output
+        id : set-result 
+        run : echo "::set-output name=step-result::success" 
