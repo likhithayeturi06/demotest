@@ -5,4 +5,4 @@ jobs:
     runs-on: windows-2022
     steps:
       - name: Output Information
-        run : echoo "Deploying & Uploading.."
+        run : echo "Deploying & Uploading.."
