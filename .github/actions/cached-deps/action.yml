@@ -1,5 +1,5 @@
-name : ' Get & cache Dependencies
-description : ' Get dependencies (via npm) and cache them.'
+name : 'Get & cache Dependencies'
+description : 'Get dependencies (via npm) and cache them.'
 runs:
   using: 'composite'
   steps:
