@@ -1,4 +1,4 @@
-name: Creating Javascript actions
+name: Creating docker actions
 on:
   push:
     branches:
