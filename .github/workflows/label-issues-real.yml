@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name : Output Information
-        run : echo "github? https://github.com/${{github.repository_owner}}/issues/${{github.event.issue.number}}/labels"
+        run : echo "github? https://github.com/${{github.repository_owner}}/${{github.repository}}/issues/${{github.event.issue.number}}/labels"
       - name: Assign label
         if: contains(github.event.issue.title, 'bug')
         run: |
