@@ -8,12 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name : Output Information
-        run : echo "github? https://github.com/${{github.repository_owner}}/${{github.repository}}/issues/labels"
+        run : echo "github?  https://github.com/${{github.repository_owner}}/issues/labels"
       - name: Assign label
         if: contains(github.event.issue.title, 'bug')
         run: |
           curl -X POST \
-          --url https://github.com/${{github.repository_owner}}/${{github.repository}}/issues/labels \
+          --url  https://github.com/${{github.repository_owner}}/issues/labels \
           -H 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
           -H 'content-type: application/json' \
           -d '{
