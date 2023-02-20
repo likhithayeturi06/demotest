@@ -17,4 +17,4 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}"\
             -H "X-GitHub-Api-Version: 2022-11-28" \
             https://github.com/${{github.repository}}/issues/${{github.event.issue.number}}/labels \
-            -d '{"labels":["bug","enhancement"]}'
+            -d '{"labels":["bug"]}'
