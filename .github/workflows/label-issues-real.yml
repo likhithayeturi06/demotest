@@ -11,7 +11,7 @@ jobs:
         if: contains(github.event.issue.title, 'bug')
         run: |
           curl -X POST \
-          --url https://github.com/repos/${{ github.repositoryUrl }}/issues/${{ github.event.issue.number }}/labels \
+          --url ${{ github.repositoryUrl }}/issues/${{ github.event.issue.number }}/labels \
           -H 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
           -H 'content-type: application/json' \
           -d '{
