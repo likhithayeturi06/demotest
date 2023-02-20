@@ -12,4 +12,4 @@ jobs:
       - name: Assign label
         if: contains(github.event.issue.title, 'bug')
         run: |
-          curl -X POST -u ${{github.repository_owner}}:${{ secrets.GITHUB_TOKEN }} -d “{\”labels\”: [\"bug\"]}” https://api.github.com/${{github.repository}}/issues/${{github.event.issue.number}}/labels
+          curl -X POST -u ${{github.repository_owner}}:${{ secrets.GITHUB_TOKEN }} -d “{\”labels\”: [\”bug\”]}” https://api.github.com/${{github.repository}}/issues/${{github.event.issue.number}}/labels
